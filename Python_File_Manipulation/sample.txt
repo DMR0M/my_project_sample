@@ -1,0 +1,1 @@
+Python aims to be an easily understandable programming language

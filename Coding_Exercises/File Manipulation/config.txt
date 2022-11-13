@@ -1,0 +1,5 @@
+auto-testing: OFF
+alignment: OFF
+auto-detection: OFF
+size: 100
+set_default: True

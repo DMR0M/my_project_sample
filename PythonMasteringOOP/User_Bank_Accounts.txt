@@ -1,0 +1,16 @@
+User:
+	Username   : RR
+	Password   : rommelasrr
+	Initial Deposit  : 15000
+
+
+User: 
+	Username  : Rommel
+	Password  : rommelasrr7
+	Initial Deposit  : 30000
+
+User: 
+	Username  : RR
+	Password  : rommelasrr7
+	Initial Deposit  : 20000
+
