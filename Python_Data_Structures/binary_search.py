@@ -1,7 +1,7 @@
 import math
 
 
-def binary_search(lst, x):
+def binary_search(lst: list[int], x: int) -> int:
     guess = math.floor(len(lst)/2)
     upper = len(lst)
     lower = 0
@@ -12,7 +12,8 @@ def binary_search(lst, x):
         if lst[guess] < x:
             lower = guess
             guess = math.floor((guess + upper) / 2)
-    return f'The sorted list: {lst}\nThe index of the target is: {guess}'
+    print(f'The sorted list: {lst}\nThe index of the target value: ')
+    return guess
 
 
 if __name__ == '__main__':
