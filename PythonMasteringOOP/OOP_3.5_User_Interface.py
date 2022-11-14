@@ -80,7 +80,7 @@ if __name__ == '__main__':
                     for j, ele_y in enumerate(ele_x):
                         users_data_file.write(f'\t{ele_y} : {ele_x[ele_y]}\n')
 
-            try_again = True
+                        
             while try_again:
                 # Access to bank transactions
                 display_options()
