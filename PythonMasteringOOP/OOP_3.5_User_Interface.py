@@ -81,7 +81,7 @@ if __name__ == '__main__':
                         users_data_file.write(f'\t{ele_y} : {ele_x[ele_y]}\n')
 
                         
-            while try_again:
+            while True:
                 # Access to bank transactions
                 display_options()
                 user_option = input('Enter Transaction: ')
