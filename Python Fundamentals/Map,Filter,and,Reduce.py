@@ -67,18 +67,80 @@ class Products:
         return sorted_dict
 
 
-if __name__ == '__main__':
-    student_gpa_list = [91, 90, 87, 93, 96, 95, 86]
-    honors = Honors(student_gpa_list)
+class GetPrime:
+    def __init__(self, num):
+        self.num = num
+        self.nums_list = [n for n in range(1, self.num+1)]
+        self.multiples = 0
+        self.mult_list = []
+        self.one_hundred_list = [n for n in range(101)]
 
-    r_list = [5, 17, 8, 3, 13, 23, 6]
-    honors1 = Honors(r_list)
+    def __repr__(self):
+        return f'Getting Prime Numbers'
+
+    def get_prime(self) -> bool:
+        for i, ele in enumerate(self.nums_list[::-1]):
+            if self.num % ele == 0:
+                self.multiples += 1
+                self.mult_list.append(ele)
+        # prints the multiples of the given number
+        print(f'Factors: {self.mult_list}')
+        if self.multiples > 2:
+            return True
+        return False
+
+    @staticmethod
+    def get_prime_c(n) -> bool:
+        nums_list = [n for n in range(1, n + 1)]
+        factors = 0
+        for i, ele in enumerate(nums_list[::-1]):
+            if n % ele == 0:
+                factors += 1
+        if factors > 2:
+            return True
+        return False
+
+    def filter_nums(self):
+        filtered_n_list = filter(GetPrime.get_prime_c, self.one_hundred_list)
+        return list(filtered_n_list)
+
+
+if __name__ == '__main__':
+    n_list = [n for n in range(101)]
+    check_num = int(input('Enter number to determine: '))
+    gp = GetPrime(check_num)
+    print(gp)
+
+    # prints if the given number is prime or not
+    is_prime = gp.get_prime()
+    print(is_prime)
+
+    # prints the prime numbers from 1-100
+    print(gp.filter_nums())
+
+    # def get_prime(n) -> bool:
+    #     nums_list = [n for n in range(1, n+1)]
+    #     factors = 0
+    #     for i, ele in enumerate(nums_list[::-1]):
+    #         if n % ele == 0:
+    #             factors += 1
+    #     if factors > 2:
+    #         return True
+    #     return False
+
+
+
+    # student_gpa_list = [91, 90, 87, 93, 96, 95, 86]
+    # honors = Honors(student_gpa_list)
+    #
+    # r_list = [5, 17, 8, 3, 13, 23, 6]
+    # honors1 = Honors(r_list)
 
     # honors.show()
     # print(honors.eval_honors())
     # print(honors.get_total_ave_of_gpa())
-    print(honors.get_max())
-    print(honors1.get_product())
+    # print(honors.get_max())
+    # print(honors1.get_product())
     # honors.gpa_list.insert(0, 95)
     # print(honors.gpa_list)
 

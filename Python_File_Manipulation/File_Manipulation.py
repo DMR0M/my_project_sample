@@ -25,7 +25,8 @@ class FileManipulation:
 class FindContacts:
     find: str = 'rommeldm87@gmail.com'
 
-    def find_specified(self):
+    @staticmethod
+    def find_specified():
         with open('contacts.txt', 'r') as contact_info:
             contact_info = contact_info.readlines()
 
