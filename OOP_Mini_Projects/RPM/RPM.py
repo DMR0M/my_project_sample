@@ -24,6 +24,7 @@ class RPSGame:
         DRAW = f'{Fore.CYAN} Draw'
 
         while n < self.games:
+            self.ai_choice = choice(self.rpm)
             user_choice = input(f'{self.rpm}\nType your choice: ')
             if user_choice not in self.rpm:
                 print('Invalid choice')
