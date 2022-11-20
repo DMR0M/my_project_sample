@@ -24,14 +24,14 @@ class RPSGame:
         DRAW = f'{Fore.CYAN} Draw'
 
         while n < self.games:
-            self.ai_choice = choice(self.rpm)
             user_choice = input(f'{self.rpm}\nType your choice: ')
+            self.ai_choice = choice(self.rpm)
             if user_choice not in self.rpm:
                 print('Invalid choice')
                 break
             print(f'Your choice is: {user_choice}\nAI choice is: {self.ai_choice}')
             # If User is rock and AI is scissors
-            if user_choice == self.rpm[0].lower and self.ai_choice == self.rpm[2]:
+            if user_choice == self.rpm[0] and self.ai_choice == self.rpm[2]:
                 print(WIN)
                 print(Style.RESET_ALL)
                 self.score += 1
