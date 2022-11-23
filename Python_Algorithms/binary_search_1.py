@@ -27,10 +27,10 @@ class BinarySearch:
 
 if __name__ == '__main__':
     num_len = 5
-    num_lib = [int(input(f'Type number at index {n}: ')) for n in range(num_len)]
+    sample = [n for n in range(1, 101)]
+    # num_lib = [int(input(f'Type number at index {n}: ')) for n in range(num_len)]
     find_item = int(input('Type number to find: '))
 
-    bs = BinarySearch(num_lib, find_item)
+    bs = BinarySearch(sample, find_item)
     print(bs.seq)
     print(bs.binary_search())
-
