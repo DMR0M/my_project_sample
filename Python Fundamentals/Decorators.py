@@ -1,36 +1,36 @@
-def sample_decorator(num):
-    def operation():
-        print('start')
-        print(num + 1)
-        print('end')
-
-    return operation()
+import time
 
 
-def func1(func):
-    def wrapper():
-        print('first')
-        func()
-        print('second')
+class LoopTest:
+    def __init__(self, n):
+        self.range_n = [n for n in range(1, n)]
+        self.sample = []
 
-    return wrapper
+    @staticmethod
+    def decorate_m(func):
+        """Decorator Method to time other Methods"""
+        def wrapper(*args, **kwargs):
+            start = time.time()
+            n = func(*args)
+            total = time.time() - start
+            print(f'Time to run: {total}')
+            return n
+        return wrapper
 
-
-@func1
-def f():
-    this_list: list[int] = [n for n in range(11) if n % 2 != 0]
-    print(this_list)
-
-
-@func1
-def g():
-    this_list: list[int] = [n for n in range(1, 11) if n % 2 == 0]
-    print(this_list)
+    @decorate_m
+    def loop(self):
+        for i, ele in enumerate(self.range_n):
+            if ele % 2 == 0:
+                self.sample.append('R')
+            else:
+                self.sample.append('r')
+        return self.sample
 
 
 if __name__ == '__main__':
-    f()
-    g()
+    l = LoopTest(10000)
+    print(l.loop())
+
 
 
 

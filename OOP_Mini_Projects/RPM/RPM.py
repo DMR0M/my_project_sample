@@ -19,9 +19,9 @@ class RPSGame:
 
     def play(self):
         n = 0
-        WIN = f'{Fore.GREEN} You Win'
-        LOSE = f'{Fore.RED} You Lose'
-        DRAW = f'{Fore.CYAN} Draw'
+        WIN = f'{Fore.GREEN} You Win!'
+        LOSE = f'{Fore.RED} You Lose!'
+        DRAW = f'{Fore.CYAN} Draw!'
 
         while n < self.games:
             user_choice = input(f'{self.rpm}\nType your choice: ')
