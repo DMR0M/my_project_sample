@@ -81,7 +81,6 @@ def alien_tracking():
     print(f"{alien_1['Exact Alien']}, {alien_2['Exact Alien']}, {alien_2['Exact Alien']}")
 
 
-
 def number_of_occurrences():
     # determines the vowels of each character of a given string
     quote = 'The quick brown fox jumps over the lazy dog'
@@ -103,6 +102,8 @@ def number_of_occurrences():
 
 # Default Dictionaries
 from collections import defaultdict
+
+
 def default_dict():
     count = defaultdict(lambda: 0)
     numbers = [1, 1, 2, 3, 5, 8]
