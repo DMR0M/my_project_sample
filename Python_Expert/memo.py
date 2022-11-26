@@ -1,6 +1,5 @@
 memory = {}
 
-
 def memoize_factorial(f):
     # This inner function has access to memory
     # and 'f'
@@ -22,5 +21,7 @@ def facto(num):
         return num * facto(num - 1)
 
 
-print(x := facto(5))
-print(facto(5))
+if __name__ == '__main__':
+    print(x := facto(5))
+    print(memory)
+    # print(facto(5))

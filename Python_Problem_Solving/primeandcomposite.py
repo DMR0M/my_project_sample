@@ -6,7 +6,7 @@ class PrimeOrComposite:
         self.factors = 0
         self.factors_list = []
 
-    def determine_if_prime(self):
+    def determine_if_prime(self) -> str:
         if self.n > 0:
             for i, ele in enumerate(self.n_list[::-1]):
                 if self.n % ele == 0:

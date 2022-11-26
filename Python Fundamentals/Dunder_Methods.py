@@ -8,10 +8,12 @@ class Sample:
         self.hundred = [n for n in range(1, 100+1)]
         self.multiplier = 2
         self.new: float = 0
+        self.n_list = []
+        self.n_dict = {}
 
     # Used to override of printing the object
     def __repr__(self):
-        return f'Total:\n{self.lst}'
+        return f'Memory List: {self.n_list}'
 
     # Used to override comparing objects
     def __eq__(self, other) -> str and bool:
@@ -23,13 +25,26 @@ class Sample:
     # Used to override multiplying objects
     def __mul__(self, other):
         self.new = other * self.multiplier
+    
+    # Used to override addition operator objects
+    def __add__(self, other):
+        self.n_list.append(other)
+        print('Successfully added to memory')
+        
+    
 
 
 if __name__ == '__main__':
     s = Sample()
     # print(divs := s.lst)
     # print(s)
-    nums = [i for i in range(1, 100+1)]
+    # nums = [i for i in range(1, 100+1)]
     num = 10
-    print(s == nums)
-    print(s * 3)
+    memory_strip = [int(input('')) for i in range(num)]
+    for i, ele in enumerate(memory_strip):
+        s + ele
+        print(s)
+    # print(s)
+    print(s.n_list)
+    # print(s == nums)
+    # print(s * 3)
