@@ -22,5 +22,5 @@ def facto(num):
         return num * facto(num - 1)
 
 
-print(facto(5))
+print(x := facto(5))
 print(facto(5))
