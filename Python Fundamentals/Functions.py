@@ -11,8 +11,8 @@ def args_and_kwargs():
     passing_arguments(*my_list)
 
 
-def passing_arguments(a, b, c, d, e):
-    print(a + b + c + d + e)
+def passing_arguments(*args):
+    print(list(args))
 
 
 def get_info():
@@ -45,4 +45,4 @@ def cube(n):
 
 
 if __name__ == '__main__':
-    main()
+    args_and_kwargs()
