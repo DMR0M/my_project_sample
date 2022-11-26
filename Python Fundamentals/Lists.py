@@ -9,7 +9,7 @@ def main():
 def slicing():
     # 1. SLICING
     # The [::] slicing takes 3 parameters [(1. start index):(2. end index or start < end):(3. intervals or-
-    # skip by n)]
+    # step by n)]
 
     # This code prints the reverse of the list
     my_list = [1, 2, 3, 'x', 'y', 'z']
