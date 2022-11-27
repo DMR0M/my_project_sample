@@ -3,8 +3,7 @@ class Quiz:
     """A Quiz Mini-game Class"""
     def __init__(self, name: str):
         self.name = name
-        self.questions = (('2**5 is equals to: '), ('log3(81) is equals to: '),
-                  ('550 / 225: '))
+        self.questions = ('2**5 is equals to: ', 'log3(81) is equals to: ', '550 / 225: ')
         self.ans = (32, 4, 2.4)
         self.score = 0
     
@@ -31,6 +30,7 @@ class Quiz:
         
     def show(self):
         pass
+
 
 if __name__ == '__main__':
     username = input('Type your username: ')

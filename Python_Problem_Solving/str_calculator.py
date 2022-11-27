@@ -15,9 +15,30 @@ class WordCalculator:
     def create_num(self) -> int:
         try:
             nums_uniq = [n for n in range(1, 13)]
-            for i, ele in enumerate(self.uniq):
-                if self.x == ele:
-                    return nums_uniq[i]
+            nums_teens = [n for n in range(13, 20)]
+            nums_tens = [n for n in range(20, 100, 10)]
+            str_num = self.x.split('-')
+            count = 0
+            print(str_num)
+            for i, s_num in enumerate(str_num):
+                if s_num == 'hundred':
+                    for num in nums_uniq:
+                        count = num * 100
+                        return count
+                for str_n, num in zip(self.uniq, nums_uniq):
+                    if s_num == str_n:
+                        count += num
+            return count
+        
+                # if num in self.teens:
+                #     for i, ele in enumerate(nums_teens):
+                #         if num == ele:
+                #             return ele
+                # if num in nums_tens:
+                #     for i, ele in enumerate(nums_tens):
+                #         if num == ele:
+                #             return ele
+            
         except ValueError:
             return f'Invalid Input\nInput must be string'
     
