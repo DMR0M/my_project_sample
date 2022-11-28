@@ -1,5 +1,6 @@
 memory = {}
 
+
 def memoize_factorial(f):
     # This inner function has access to memory
     # and 'f'
