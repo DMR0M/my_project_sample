@@ -1,0 +1,17 @@
+from dataclass import dataclasses
+
+
+@dataclass
+class Sample:
+    name: str
+    s: str
+    x: int
+    /*
+     * Age, Gender
+    */
+
+
+if __name__ == '__main__':
+    /* xyz */
+    print(hello)
+    /* abc */

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+import pandas as pd
 
 
 @dataclass
@@ -11,7 +12,7 @@ class Students:
 
     def __repr__(self):
         gpa: float = sum(self.grades) / len(self.grades)
-        return f'\nGeneral Weighted Average: {"%.2f" % gpa}'
+        return f'GPA: {gpa}'
 
 
 if __name__ == '__main__':
@@ -21,6 +22,5 @@ if __name__ == '__main__':
     subj = [input('Type subjects: ') for i in range(6)]
     grd = [int(input(f'Grade for {sub}: ')) for sub in subj]
     
-    stdnt_1 = Students(f_name, l_name, age, subj, grd)
-    print(stdnt_1)
-    
+    std_1 = Students(f_name, l_name, age, subj, grd)
+    print(std_1)

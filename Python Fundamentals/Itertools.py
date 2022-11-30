@@ -30,7 +30,7 @@ class IteratingVal:
 
     """Using count"""
     # count func from itertools takes 2 arguments
-    # [STARTING INDEX <i>, STEPS OR INTERVALS <j>]
+    # [STARTING INDEX <i>, STEPS OR INTERVALS <j>]z
     def count_to_hundred(self):
         new_list: list[int] = []
         choice: str = input('Do you want to print as list or sequence of numbers?'

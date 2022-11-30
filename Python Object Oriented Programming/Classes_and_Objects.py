@@ -16,7 +16,7 @@ class Dog:
 
 # Object
 my_dog = Dog('Patty', 3, 'Blue')
-print(f'I have a dog named {my_dog.name} and she is {my_dog.age} and she is {my_dog.color}')
+print(my_dog)
 
 
 

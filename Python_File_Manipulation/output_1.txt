@@ -1,0 +1,12 @@
+from dataclass import dataclasses
+
+
+@dataclass
+class Sample:
+    name: str
+    s: str
+    x: int
+
+
+if __name__ == '__main__':
+    print(hello)
