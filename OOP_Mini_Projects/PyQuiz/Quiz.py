@@ -1,3 +1,6 @@
+from random import choices
+
+
 class Quiz:
     memory = []
     """A Quiz Mini-game Class"""
@@ -5,6 +8,7 @@ class Quiz:
         self.name = name
         self.questions = ('2**5 is equals to: ', 'log3(81) is equals to: ', '550 / 225: ')
         self.ans = (32, 4, 2.4)
+        # self.qa = {'2**5 is equals to: ': 32, 'log3(81) is equals to: ': 4, '550 / 225: ': 2.4}
         self.score = 0
     
     def __repr__(self):
@@ -19,9 +23,10 @@ class Quiz:
         self.name = new_name    
     
     def play(self) -> None:
+        a = choices(self.questions)
         try:
-            for i, ele in enumerate(self.questions):
-                print(f'\nQuestion {i+1}: \n{ele}', end = ' ')
+            for i, ele in enumerate(a):
+                print(f'\nQuestion {i+1}: \n{ele}', end=' ')
                 u_ans = float(input(''))
                 self.score += 1 if u_ans == self.ans[i] else 0
             print(f'\nTotal Score: {self.score}/{len(self.questions)}')

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass()
@@ -10,13 +10,21 @@ class MultiCalc:
 
     def multi_calc(self) -> float or str:
         equation = self.calc.split(' ')
-        operation = ['+', '-', '*', '/']
-        op_list = list(filter(lambda x: x if x in operation else 0, equation))
-        nums_list = list(filter(lambda x: x if x not in operation else 0, equation))
+        operations = ['+', '-', '*', '/', '^']
+
+        # creating list containing arithmetics filtering main list input
+        op_list = list(filter(lambda x: x if x in operations else 0, equation))
+
+        # creating list containing only numbers as str filtering main list input
+        nums_list = list(filter(lambda x: x if x not in operations else 0, equation))
+
+        # converting elements nums_list to float
         nums_list = list(map(float, nums_list))
+
+        # initializing var to first element in nums_list
         ans = nums_list.pop(0)
 
-        # Operations
+        # operations
         for i, num in enumerate(nums_list):
             if op_list[i] == '+':
                 ans += num
@@ -26,6 +34,8 @@ class MultiCalc:
                 ans *= num
             elif op_list[i] == '/':
                 ans /= num
+            elif op_list[i] == '^':
+                ans **= num
             else:
                 return 'Invalid operation'
         return f'{"%.2f" % ans}'
